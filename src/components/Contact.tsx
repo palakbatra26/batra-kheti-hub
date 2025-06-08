@@ -1,4 +1,3 @@
-
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Phone, MapPin, Clock, Mail } from "lucide-react";
@@ -10,8 +9,8 @@ const Contact = () => {
       title: "Phone Numbers",
       details: [
         "Vinkal Batra: 94172-91699",
-        "Vinod Kumar: 9876094088", 
-        "Mangat Ram Batra: 94641-07400"
+        "Vinod Batra: 9876094088", 
+        "Mangat Batra: 94641-07400"
       ]
     },
     {

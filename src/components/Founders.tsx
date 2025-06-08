@@ -13,7 +13,7 @@ const Founders = () => {
       description: "Visionary leader with extensive experience in agricultural business"
     },
     {
-      name: "Vinod Kumar",
+      name: "Vinod Batra",
       role: "Co-Founder", 
       phone: "9876094088",
       icon: User,
@@ -21,7 +21,7 @@ const Founders = () => {
       description: "Expert in pesticide solutions and crop protection strategies"
     },
     {
-      name: "Mangat Ram Batra",
+      name: "Mangat Batra",
       role: "Co-Founder",
       phone: "94641-07400", 
       icon: Users,
