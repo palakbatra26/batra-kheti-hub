@@ -12,12 +12,22 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      <Hero />
-      <Founders />
-      <Services />
-      <Products />
+      <div id="home">
+        <Hero />
+      </div>
+      <div id="founders">
+        <Founders />
+      </div>
+      <div id="services">
+        <Services />
+      </div>
+      <div id="products">
+        <Products />
+      </div>
       <Gallery />
-      <Contact />
+      <div id="contact">
+        <Contact />
+      </div>
       <Footer />
     </div>
   );
