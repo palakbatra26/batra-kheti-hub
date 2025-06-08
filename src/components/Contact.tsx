@@ -9,9 +9,9 @@ const Contact = () => {
       icon: Phone,
       title: "Phone Numbers",
       details: [
-        "94172-91699",
-        "9876094088", 
-        "94641-07400"
+        "Vinkal Batra: 94172-91699",
+        "Vinod Kumar: 9876094088", 
+        "Mangat Ram Batra: 94641-07400"
       ]
     },
     {
@@ -32,6 +32,10 @@ const Contact = () => {
       ]
     }
   ];
+
+  const handleGetDirections = () => {
+    window.open('https://maps.app.goo.gl/Ug8FNAedpuqGuFNb7', '_blank');
+  };
 
   return (
     <section className="py-16 px-6 bg-green-50">
@@ -75,7 +79,10 @@ const Contact = () => {
               <p className="mb-6">
                 Experience our quality products and expert advice firsthand at our Malout location.
               </p>
-              <Button className="bg-white text-green-600 hover:bg-green-50">
+              <Button 
+                className="bg-white text-green-600 hover:bg-green-50"
+                onClick={handleGetDirections}
+              >
                 <MapPin className="h-4 w-4 mr-2" />
                 Get Directions
               </Button>
