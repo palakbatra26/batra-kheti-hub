@@ -19,7 +19,7 @@ const Header = () => {
   return (
     <header className="bg-green-600 text-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-6">
-        <div className="flex justify-between items-center py-4">
+        <div className="flex justify-between items-center py-2">
           <div className="flex items-center space-x-4">
             <div>
               <h1 className="text-2xl font-bold">Batra Kheti Centre</h1>
@@ -29,36 +29,41 @@ const Header = () => {
           
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
-            <button 
+            <a 
+              href="#home"
               onClick={() => scrollToSection('home')}
               className="hover:text-green-200 transition-colors cursor-pointer"
             >
               Home
-            </button>
-            <button 
+            </a>
+            <a 
+              href="#founders"
               onClick={() => scrollToSection('founders')}
               className="hover:text-green-200 transition-colors cursor-pointer"
             >
               About Us
-            </button>
-            <button 
+            </a>
+            <a 
+              href="#services"
               onClick={() => scrollToSection('services')}
               className="hover:text-green-200 transition-colors cursor-pointer"
             >
               Services
-            </button>
-            <button 
+            </a>
+            <a 
+              href="#products"
               onClick={() => scrollToSection('products')}
               className="hover:text-green-200 transition-colors cursor-pointer"
             >
               Our Products
-            </button>
-            <button 
+            </a>
+            <a 
+              href="#contact"
               onClick={() => scrollToSection('contact')}
               className="hover:text-green-200 transition-colors cursor-pointer"
             >
               Contact Us
-            </button>
+            </a>
           </nav>
 
           {/* Mobile menu button */}
@@ -74,36 +79,41 @@ const Header = () => {
         {isMenuOpen && (
           <nav className="md:hidden py-4 border-t border-green-500">
             <div className="flex flex-col space-y-4">
-              <button 
+              <a 
+                href="#home"
                 onClick={() => scrollToSection('home')}
                 className="text-left hover:text-green-200 transition-colors cursor-pointer"
               >
                 Home
-              </button>
-              <button 
+              </a>
+              <a 
+                href="#founders"
                 onClick={() => scrollToSection('founders')}
                 className="text-left hover:text-green-200 transition-colors cursor-pointer"
               >
                 About Us
-              </button>
-              <button 
+              </a>
+              <a 
+                href="#services"
                 onClick={() => scrollToSection('services')}
                 className="text-left hover:text-green-200 transition-colors cursor-pointer"
               >
                 Services
-              </button>
-              <button 
+              </a>
+              <a 
+                href="#products"
                 onClick={() => scrollToSection('products')}
                 className="text-left hover:text-green-200 transition-colors cursor-pointer"
               >
                 Our Products
-              </button>
-              <button 
+              </a>
+              <a 
+                href="#contact"
                 onClick={() => scrollToSection('contact')}
                 className="text-left hover:text-green-200 transition-colors cursor-pointer"
               >
                 Contact Us
-              </button>
+              </a>
             </div>
           </nav>
         )}

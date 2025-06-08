@@ -1,6 +1,17 @@
 
 import { Button } from "@/components/ui/button";
 import { Sprout, Shield, Leaf } from "lucide-react";
+import { useNavigate } from "react-router-dom";
+
+const scrollToSection = (sectionId: string) => {
+  const element = document.getElementById(sectionId);
+  if (element) {
+    element.scrollIntoView({ 
+      behavior: 'smooth',
+      block: 'start'
+    });
+  }
+};
 
 const Hero = () => {
   return (
@@ -19,10 +30,17 @@ const Hero = () => {
           fertilizers, and farming solutions for better crop protection and higher yields.
         </p>
         <div className="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
-          <Button className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-lg">
+          <Button 
+            onClick={() => scrollToSection('products')}
+            className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-lg"
+          >
             Our Products
           </Button>
-          <Button variant="outline" className="border-green-600 text-green-600 hover:bg-green-50 px-8 py-3 text-lg">
+          <Button 
+            onClick={() => scrollToSection('contact')}
+            variant="outline" 
+            className="border-green-600 text-green-600 hover:bg-green-50 px-8 py-3 text-lg"
+          >
             Contact Us
           </Button>
         </div>

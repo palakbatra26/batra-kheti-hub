@@ -24,7 +24,9 @@ const Index = () => {
       <div id="products">
         <Products />
       </div>
-      <Gallery />
+      <div id="gallery">
+        <Gallery />
+      </div>
       <div id="contact">
         <Contact />
       </div>
