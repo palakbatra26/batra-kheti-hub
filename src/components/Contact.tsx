@@ -1,8 +1,12 @@
+
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Phone, MapPin, Clock, Mail } from "lucide-react";
+import { Phone, MapPin, Clock } from "lucide-react";
+import { useState } from "react";
 
 const Contact = () => {
+  const [showPhones, setShowPhones] = useState(false);
+
   const contactInfo = [
     {
       icon: Phone,
@@ -36,6 +40,10 @@ const Contact = () => {
     window.open('https://maps.app.goo.gl/Ug8FNAedpuqGuFNb7', '_blank');
   };
 
+  const handleContactUs = () => {
+    setShowPhones(true);
+  };
+
   return (
     <section className="py-16 px-6 bg-green-50">
       <div className="container mx-auto">
@@ -49,25 +57,37 @@ const Contact = () => {
           </p>
         </div>
         
-        <div className="grid md:grid-cols-3 gap-8 mb-12">
-          {contactInfo.map((info, index) => (
-            <Card key={index} className="text-center hover:shadow-lg transition-shadow bg-white border-green-100">
-              <CardContent className="p-8">
-                <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
-                  <info.icon className="h-8 w-8 text-green-600" />
-                </div>
-                <h3 className="text-xl font-bold text-green-800 mb-4">
-                  {info.title}
-                </h3>
-                {info.details.map((detail, idx) => (
-                  <p key={idx} className="text-gray-600 mb-1">
-                    {detail}
-                  </p>
-                ))}
-              </CardContent>
-            </Card>
-          ))}
-        </div>
+        {!showPhones ? (
+          <div className="text-center mb-12">
+            <Button 
+              className="bg-green-600 hover:bg-green-700 text-white px-8 py-3 text-lg"
+              onClick={handleContactUs}
+            >
+              <Phone className="h-5 w-5 mr-2" />
+              Contact Us
+            </Button>
+          </div>
+        ) : (
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
+            {contactInfo.map((info, index) => (
+              <Card key={index} className="text-center hover:shadow-lg transition-shadow bg-white border-green-100">
+                <CardContent className="p-8">
+                  <div className="bg-green-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-6">
+                    <info.icon className="h-8 w-8 text-green-600" />
+                  </div>
+                  <h3 className="text-xl font-bold text-green-800 mb-4">
+                    {info.title}
+                  </h3>
+                  {info.details.map((detail, idx) => (
+                    <p key={idx} className="text-gray-600 mb-1">
+                      {detail}
+                    </p>
+                  ))}
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        )}
 
         <div className="text-center">
           <Card className="max-w-md mx-auto bg-green-600 text-white border-green-600">
